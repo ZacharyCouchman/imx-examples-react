@@ -61,6 +61,7 @@ function WidgetModal({
       case WidgetType.WALLET: {
         wallet.addListener(WalletEventType.DISCONNECT_WALLET, () => {
           wallet.unmount();
+          onClose();
           // logout();
         })
         wallet.addListener(OrchestrationEventType.REQUEST_BRIDGE, (data: RequestBridgeEvent) => {

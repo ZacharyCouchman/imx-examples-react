@@ -42,6 +42,7 @@ export function AppHeaderBar() {
           <MenuList minW={40} w={60}>
             <ImxBalance />
             <MenuDivider />
+            <MenuItem onClick={() => openWidget(WidgetType.WALLET)}>Balances</MenuItem>
             <MenuItem onClick={logout}>Logout</MenuItem>
           </MenuList>
         </Menu>
